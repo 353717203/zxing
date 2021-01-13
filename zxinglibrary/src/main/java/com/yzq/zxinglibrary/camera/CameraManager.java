@@ -255,7 +255,7 @@ public final class CameraManager {
 
             /*水平居中  偏上显示*/
             int leftOffset = (screenResolution.x - width) / 2;
-            int topOffset = (screenResolution.y - height) / 5;
+            int topOffset = (screenResolution.y - height) / 4;
 
             framingRect = new Rect(leftOffset, topOffset, leftOffset + width,
                     topOffset + height);
@@ -287,10 +287,10 @@ public final class CameraManager {
             }
 
             /******************** 竖屏更改1(cameraResolution.x/y互换) ************************/
-            rect.left = rect.left * cameraResolution.y / screenResolution.x;
-            rect.right = rect.right * cameraResolution.y / screenResolution.x;
-            rect.top = rect.top * cameraResolution.x / screenResolution.y;
-            rect.bottom = rect.bottom * cameraResolution.x / screenResolution.y;
+            rect.left = rect.left * cameraResolution.x / screenResolution.x;
+            rect.right = rect.right * cameraResolution.x / screenResolution.x;
+            rect.top = rect.top * cameraResolution.y / screenResolution.y;
+            rect.bottom = rect.bottom * cameraResolution.y / screenResolution.y;
             framingRectInPreview = rect;
         }
         return framingRectInPreview;
